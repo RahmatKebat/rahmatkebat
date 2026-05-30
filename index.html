@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aplikasi Pembelajaran Komputer - Rahmat Kebat</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+header{
+background:#0066cc;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+.profile-img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+margin-bottom:15px;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+nav{
+display:flex;
+justify-content:center;
+background:#004d99;
+flex-wrap:wrap;
+}
+
+nav button{
+padding:15px;
+border:none;
+background:none;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+nav button:hover{
+background:#003366;
+}
+
+.container{
+padding:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.hidden{
+display:none;
+}
+
+h2{
+color:#0066cc;
+margin-bottom:10px;
+}
+
+ul{
+padding-left:20px;
+}
+
+.quiz-question{
+margin-bottom:15px;
+}
+
+.quiz-question p{
+font-weight:bold;
+margin-bottom:5px;
+}
+
+.btn{
+background:#0066cc;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#004d99;
+}
+
+#result{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+color:green;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#0066cc;
+color:white;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="foto-rahmat.jpg" alt="Rahmat Kebat" class="profile-img">
+
+<h1>📚 Aplikasi Pembelajaran Komputer</h1>
+<p>Belajar Komputer Dasar dengan Mudah</p>
+<br>
+<h3>Dibuat Oleh</h3>
+<h2 style="color:white;">Rahmat Kebat</h2>
+
+</header>
+
+<nav>
+<button onclick="showPage('home')">Beranda</button>
+<button onclick="showPage('profil')">Profil</button>
+<button onclick="showPage('dasar')">Komputer Dasar</button>
+<button onclick="showPage('hardware')">Hardware</button>
+<button onclick="showPage('software')">Software</button>
+<button onclick="showPage('quiz')">Kuis</button>
+</nav>
+
+<div class="container">
+
+<div id="home" class="card">
+<h2>Selamat Datang</h2>
+<p>
+Aplikasi ini membantu pengguna mempelajari dasar-dasar komputer
+mulai dari perangkat keras, perangkat lunak, hingga latihan soal
+interaktif.
+</p>
+</div>
+
+<div id="profil" class="card hidden">
+<h2>Profil Pembuat</h2>
+
+<center>
+<img src="foto-rahmat.jpg" alt="Rahmat Kebat"
+style="width:180px;height:180px;border-radius:50%;object-fit:cover;">
+</center>
+
+<br>
+
+<p><strong>Nama:</strong> Rahmat Kebat</p>
+<p><strong>Profesi:</strong> Pengembang Aplikasi & Pembelajar Teknologi</p>
+<p><strong>Aplikasi:</strong> Sistem Pembelajaran Komputer</p>
+
+<br>
+
+<p>
+Aplikasi ini dibuat untuk membantu siswa, mahasiswa,
+dan masyarakat umum memahami dasar-dasar komputer
+secara mudah dan interaktif.
+</p>
+</div>
+
+<div id="dasar" class="card hidden">
+<h2>Dasar Komputer</h2>
+
+<p>
+Komputer adalah perangkat elektronik yang digunakan
+untuk menerima data, mengolah data, menyimpan data,
+dan menghasilkan informasi.
+</p>
+
+<br>
+
+<ul>
+<li>Input Device</li>
+<li>Process Device</li>
+<li>Output Device</li>
+<li>Storage Device</li>
+</ul>
+
+</div>
+
+<div id="hardware" class="card hidden">
+<h2>Hardware Komputer</h2>
+
+<ul>
+<li>Processor (CPU)</li>
+<li>Motherboard</li>
+<li>RAM</li>
+<li>SSD / Harddisk</li>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Monitor</li>
+<li>Printer</li>
+<li>Scanner</li>
+</ul>
+
+</div>
+
+<div id="software" class="card hidden">
+<h2>Software Komputer</h2>
+
+<ul>
+<li>Windows</li>
+<li>Linux</li>
+<li>Microsoft Office</li>
+<li>Google Chrome</li>
+<li>Adobe Photoshop</li>
+<li>Antivirus</li>
+</ul>
+
+</div>
+
+<div id="quiz" class="card hidden">
+
+<h2>Kuis Komputer</h2>
+
+<div class="quiz-question">
+<p>1. CPU merupakan?</p>
+
+<label>
+<input type="radio" name="q1" value="1">
+Otak Komputer
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="0">
+Monitor
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="0">
+Printer
+</label>
+</div>
+
+<div class="quiz-question">
+<p>2. Windows termasuk?</p>
+
+<label>
+<input type="radio" name="q2" value="1">
+Software
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="0">
+Hardware
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="0">
+Perangkat Input
+</label>
+</div>
+
+<div class="quiz-question">
+<p>3. SSD digunakan untuk?</p>
+
+<label>
+<input type="radio" name="q3" value="1">
+Penyimpanan Data
+</label><br>
+
+<label>
+<input type="radio" name="q3" value="0">
+Menampilkan Gambar
+</label><br>
+
+<label>
+<input type="radio" name="q3" value="0">
+Mencetak Dokumen
+</label>
+</div>
+
+<button class="btn" onclick="hitungNilai()">
+Periksa Nilai
+</button>
+
+<div id="result"></div>
+
+</div>
+
+</div>
+
+<footer>
+© 2025 Aplikasi Pembelajaran Komputer | Dibuat Oleh Rahmat Kebat
+</footer>
+
+<script>
+
+function showPage(id){
+
+const pages=[
+'home',
+'profil',
+'dasar',
+'hardware',
+'software',
+'quiz'
+];
+
+pages.forEach(page=>{
+document.getElementById(page).classList.add('hidden');
+});
+
+document.getElementById(id).classList.remove('hidden');
+}
+
+function hitungNilai(){
+
+let score=0;
+
+document.querySelectorAll('input[type=radio]:checked')
+.forEach(item=>{
+score += Number(item.value);
+});
+
+let nilai=(score/3)*100;
+
+document.getElementById("result").innerHTML=
+"🎉 Nilai Anda: " + nilai;
+
+}
+
+</script>
+
+</body>
+</html>
